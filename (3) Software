@@ -1,0 +1,13 @@
+#Backend Code 
+So, arguably the most important feature the Pi has for us are the GPIO pins. These allow us to take in data from different breakout boards. Most of these breakout boards, as I mentioned before, most of these communicate with the Pi by either sending high or low voltage. 
+
+Now the question is, what do we need to tell Python to do once it realizes that one of those boards is sending voltage? 
+
+What we use is called an interrupt. What this does is while everything else is running, the interrupt grabs the attention of the computer and says hey, you need to come deal with this. Then, the interrupt hands the computer a list of instructions in the form of a function. Then, the computer goes back to what it was doing and waits for another interrupt. 
+
+So, lets say you attach a button to a pin so that whenever you push the button it lets voltage through and attach that to an interrupt. You tell the interrupt to watch pin number 6, for example and you map it to the function buttonPush. Then, in that function, you can say print("Button was pushed") and every time you push that button, you will print out: Button was pushed. 
+
+Now, if we map this to a timer, we can keep track of how many milliseconds pass between each button push. Then, if we divide 60 seconds by the amount of time it takes to complete one rotation, and swap out the button for a Hall Effect Sensor, we can calculate how many rotations will happen in 1 minute. Then, if you multiply that by the circumference of the wheels and you can calculate speed. 
+
+#Front End 
+Yeah man, I got nuthin'. 
