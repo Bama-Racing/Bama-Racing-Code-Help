@@ -4,8 +4,6 @@ Alternatively, I found it much more ~tasteful~ to remotely connect to the RasPi.
 
 Since I'm not about to put the IP address, username, and login information to my Pi on the internet, I will give you this information as needed. Please note that as you type in the password PuTTY will not actually type any characters. This is not an error, its just PuTTY's method for sensoring the password.
 
-Alternatively, if you need to use the full graphical desktop you can use VNC Viewer (download here www.realvnc.com/en/connect/download/viewer/). Once you download, you can just type in the IP address to the Pi in that top search bar, then it should prompt you to enter the login information.
-
-This is an example. 
+Alternatively, if you need to use the full graphical desktop you can use VNC Viewer (download here www.realvnc.com/en/connect/download/viewer/). Once you download, you can just type in the IP address to the Pi in that top search bar, then it should prompt you to enter the login information. 
 
 Video: https://www.youtube.com/watch?v=IDqQIDL3LKg&t=339s
