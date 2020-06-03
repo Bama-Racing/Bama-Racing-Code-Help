@@ -1,0 +1,11 @@
+There are several methods of connecting to the RasPi. Most simply, Pi does have an HDMI port and four USB ports, so if you would like, you can edit code directly on the Pi. However, as I was learning, I found it confusing and annoying to have two keyboards and two mice on my desk. So I could Google solutions on my desktop and then apply them on the Pi.
+
+Alternatively, I found it much more ~tasteful~ to remotely connect to the RasPi. The easiest way to do this is to use PuTTY (download at putty.org). As long as you are on the same WiFi or Ethernet network as the Pi, you can type in its IP address and then use the Pi's login info to access the terminal which is all you need for most things.
+
+Since I'm not about to put the IP address, username, and login information to my Pi on the internet, I will give you this information as needed. Please note that as you type in the password PuTTY will not actually type any characters. This is not an error, its just PuTTY's method for sensoring the password.
+
+Alternatively, if you need to use the full graphical desktop you can use VNC Viewer (download here www.realvnc.com/en/connect/download/viewer/). Once you download, you can just type in the IP address to the Pi in that top search bar, then it should prompt you to enter the login information.
+
+This is an example.
+
+Video: https://www.youtube.com/watch?v=IDqQIDL3LKg&t=339s
