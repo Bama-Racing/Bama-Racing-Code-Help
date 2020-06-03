@@ -1,0 +1,15 @@
+This year we are moving from an Arduino (a type of Micro Controller) to a Raspberry Pi (RasPi). The RasPi is much more powerful and can even run a full operating system, Linux, which is comprable to Windows. 
+
+To tell the RasPi what we want to do, we use Python. 
+
+With Python, we import libraries of code. Each library gives us more code that we can use to interface with Python and by extent the RasPi. For example, we have several General Purpose Input/Output (GPIO) Pins on the RasPi. We add the line "import Rpi.GPIO as GPIO" to allow us to access these pins with Python. 
+
+These GPIO pins run on 3.3v and by turning on and off the power to these pins, the RasPi is able to talk to the breakout boards. Unfortunately, since we are coming from an Arduino system, which uses 5v of power to talk to its breakout boards, we have to add another board into this mix that translates the 3.3v in to 5v and vise versa. 
+
+We are currently using four breakout boards. We are using two Hall Effect Sensors (HES or HEF), these detect magnetic fields. We have mounted magnets on different shafts around the engine for these sensors. Once we detect one pass of the magnet, we know that axle has spun around once (we'll get a little more into that in the code section). We also use a Real Time Clock (RTC) which allows us to keep time. Finally, we use a thermistor (aka the thermal sensor or thermometer) to measure the temperature of our transmission. 
+
+Almost all of these sensors use a binary system to communicate their output to the RasPi. For example, when the HES detects a magnetic field, it sends 3.3v to the RasPi, when there is no longer a magnetic field, the power is cut. When the RTC wants to denote that one millisecond has passed, it sends a ping of 3.3v. 
+
+However, the thermal sensor has to relay more complex data. A number like 80 degrees, cannot be easily communicated over binary. Instead the thermal sensor uses a method called I2C (i squared C) which stands for Inter-Integrated Circuit. This is another method for the RasPi to communicate with its breakout boards. Don't worry, this won't be on the test, I just want you to be familar with it for when you run into it. You can spot the I2C connection on the board easily because it uses 2 data connectors (for a total of 4 connections to the board, including positive and negative) instead of the standard single data connector. 
+
+Now once all of these breakout boards relay their data to the RasPi and the figures are processed by the code, they are exported to our display which simply connects to the RasPi with an HDMI cable. 
